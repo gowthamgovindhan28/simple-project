@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="shortcut icon" href="C:\Users\gowth\Downloads\google-logo-9808.png" type="image/x-icon">
+    <style>
+        body{
+            background-color:  #5bccf6;
+        }
+        #one {
+            
+            background-color: #fcde67;
+            border-radius: 10px;
+            margin-inline: 600px;
+            margin: auto;
+            width: 50%;
+            padding: 50px;
+
+        }
+        #four{
+            background-color: #fcde67;
+            border-radius: 10px;
+            margin-inline: 600px;
+            margin: auto;
+            width: 50%;
+            padding: 50px;
+            position: relative;
+            top: -10px;
+        }
+
+        #two{
+            margin: auto;
+            width: 50%;
+            
+        }
+
+        #top{
+            text-transform: uppercase;
+            font-family: cursive;
+            font-size:x-large;
+        }
+        #bottom{
+            text-transform: uppercase;
+            font-family: cursive;
+            font-size:x-large;
+            text-align: center;
+        }
+
+
+        #input{
+            margin-left: 15px;
+            width: 90%;
+            height: 30px;
+            border-radius: 4px;
+            
+
+        }
+        #Result{
+            /* border: 1px solid black; */
+            margin-left: 251px;
+            /* width: 47%;
+            height: 30px; */
+            /* background-color: white; */
+            text-align: center;
+            font-family: cursive;
+            /* font-size: larger; */
+        
+            
+        }
+    
+        #button{
+            position:relative;
+            font-weight: bold;
+            left: 850px;
+            bottom: -10px;
+            font-size: 16px;
+            font-weight: 200;
+            letter-spacing: 1px;
+            padding: 13px 20px 13px;
+            outline: 0;
+            border: 1px solid black;
+            cursor: pointer;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+        #button:after{
+            content: '''';
+            background-color:#fcde67 ;
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            top: 7px;
+            left: 7px;
+            transition: 1s;
+
+
+        }
+
+        #button:hover:after{
+            top: 0px;
+            left: 0px;
+        }
+        @media (min-width: 768px){
+            #button{
+                padding: 13px 50pa 13px;
+            }
+        }
+        .next{
+            position: relative;
+            left: 100px;
+        }
+
+      
+        
+    </style>
+</head>
+<body>
+    <br><br>
+    <div id="one">
+        <div id="two">
+        <div>
+        <p id="top">Centimeters to Inches Converter</p><br>
+    </div>
+    <div>
+        <input type="number" required id="input" placeholder="Enter the Value"><br><br>
+    </div>
+
+    
+</div>
+    </div>
+
+    <div id="three">
+        
+        <button id="button" onclick="Convert()">Convert</button>
+        <button id="button" class="next" onclick="document.location.reload(true)">Reset</button>
+        <br><br>
+    </div><br>
+    <div id="four">
+        <p id="bottom">Result</p>
+        <!-- <input type="text" id="Result" disabled> -->
+        <p id="Result"></p>  
+        
+    </div>
+
+    <script>
+        function Convert(){
+            let c = document.getElementById("input").value;
+            let answer= ((c)*0.393701);
+            document.getElementById("Result").innerHTML=answer+" inches";
+            document.getElementById("Result").style.border="1px solid black";
+            document.getElementById("Result").style.borderRadius="5px"
+            document.getElementById("Result").style.backgroundColor="White";
+            document.getElementById("Result").style.width="47%";
+            document.getElementById("Result").style.height="30px";
+            document.getElementById("Result").style.fontSize="larger";
+            document.getElementById("Result").style.transition="2s";
+        }
+    </script>
+</body>
+</html>
