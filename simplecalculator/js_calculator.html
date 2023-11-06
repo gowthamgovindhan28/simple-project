@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculator</title>
+</head>
+<body>
+    <script>
+        alert("Welcome to JS Calculator")
+        const a =+prompt("Enter First Value : ")
+        const o =prompt("Enter Operator : ")
+        const b =+prompt("Enter Second Value : ")
+
+        switch(o){
+            case"+":
+            console.log(a+b);
+            break;
+
+            case"-":
+            console.log(a-b);
+            break;
+
+            case"*":
+            console.log(a*b);
+            break;
+
+            case"/":
+            console.log(a/b);
+            break;
+
+            case"%":
+            console.log(a%b);
+            break;
+
+            default:
+                console.log("MAth ErrOR");
+        }
+    </script>
+</body>
+</html>

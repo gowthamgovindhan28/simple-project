@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASMD</title>
+</head>
+<body>
+
+    <input type="number" id="f" placeholder="Enter First Value">
+    <input type="text" id="o" placeholder="Enter Operator">
+    <input type="number" id="s" placeholder="Enter Second Value">
+    <button onclick="cal()">Calculate</button>
+    <input type="text" id="Result">
+
+    <script>
+
+        function cal(){
+        const a =parseInt(document.getElementById('f').value);
+        const op =(document.getElementById('o').value);
+        const b =parseInt(document.getElementById('s').value);
+        let result;
+
+        if(op === '+'){
+            let result = a+b;
+        }
+
+        if(op === '-'){
+            let result = a-b;
+        }
+
+        if(op === '*'){
+            let result = a*b;
+        }
+
+        if(op === '/'){
+            let result = a/b;
+        }
+        console.log(result);
+        document.getElementById('Result').value=result;
+        
+    }
+
+        
+    </script>
+</body>
+</html>
